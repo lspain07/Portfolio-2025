@@ -17,8 +17,10 @@ def game():
                 break
         except ValueError:
             label_result.config(text="Invalid input. Please enter a whole number.")
+            break
         except KeyboardInterrupt:
             label_result.config(text="Invalid input. Please enter a whole number.")
+            break
             
 main = tk.Tk()
 main.title("Guess the Number!")

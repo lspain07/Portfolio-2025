@@ -2,24 +2,32 @@ import tkinter as tk
 import random 
 
 def game():
+    def reset():
+        global guess
+        guess = " "
     while True:
         try:
             guess = int(entry_guess.get())
             answer = random.randint(1,10)
             if guess == answer:
                 label_result.config(text="Yep! You got it right!")
+                reset()
                 break
             elif guess > 10 or guess < 1:
                 label_result.config(text="You idiot! That's not in the range!")
+                reset()
                 break
             else:
                 label_result.config(text=f"You got it wrong! The answer was {answer}!")
+                reset()
                 break
         except ValueError:
             label_result.config(text="Invalid input. Please enter a whole number.")
+            reset()
             break
         except KeyboardInterrupt:
             label_result.config(text="Invalid input. Please enter a whole number.")
+            reset()
             break
             
 main = tk.Tk()

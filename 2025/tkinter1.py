@@ -1,6 +1,9 @@
 import tkinter as tk
 import random 
 
+def clear():
+    entry_guess.delete(0, tk.END)
+
 def game():
     while True:
         try:
@@ -8,23 +11,23 @@ def game():
             answer = random.randint(1,10)
             if guess == answer:
                 label_result.config(text="Yep! You got it right!")
-                #button_getanswer.config(command=lambda: entry_guess.delete(0, tk.END))
+                clear()
                 break
             elif guess > 10 or guess < 1:
                 label_result.config(text="You idiot! That's not in the range!")
-                #button_getanswer.config(command=lambda: entry_guess.delete(0, tk.END))
+                clear()
                 break
             else:
                 label_result.config(text=f"You got it wrong! The answer was {answer}!")
-                #button_getanswer.config(command=lambda: entry_guess.delete(0, tk.END))
+                clear()
                 break
         except ValueError:
             label_result.config(text="Invalid input. Please enter a whole number.")
-            #button_getanswer.config(command=lambda: entry_guess.delete(0, tk.END))
+            clear()
             break
         except KeyboardInterrupt:
             label_result.config(text="Invalid input. Please enter a whole number.")
-            #button_getanswer.config(command=lambda: entry_guess.delete(0, tk.END)) is how you would delete it
+            clear()
             break
             
 main = tk.Tk()

@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import PhotoImage
 import random
 
 bot_choice = random.randint(1,3)# 1 = rock, 2 = paper, 3 = scissors
@@ -29,6 +30,7 @@ def scissors():
 
 main = tk.Tk()
 main.title("Guess the Number!")
+main.geometry("960x600")
 
 label_guess = tk.Label(main, text="Which one?")
 label_guess.pack()

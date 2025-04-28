@@ -2,30 +2,33 @@ import tkinter as tk
 from tkinter import PhotoImage
 import random
 
-bot_choice = random.randint(1,3)# 1 = rock, 2 = paper, 3 = scissors
+# 1 = rock, 2 = paper, 3 = scissors
 
 def rock():
-  if bot_choice == 1:
+  bot_choice1 = random.randint(1,3)
+  if bot_choice1 == 1:
     label_result.config(text="Rock! Go Again!")
-  if bot_choice == 2:
+  if bot_choice1 == 2:
     label_result.config(text="Paper! You lose!")
-  if bot_choice == 3:
+  if bot_choice1 == 3:
     label_result.config(text="Scissors! You win!")
 
 def paper():
-  if bot_choice == 1:
+  bot_choice2 = random.randint(1,3)
+  if bot_choice2 == 1:
     label_result.config(text="Rock! You win!")
-  if bot_choice == 2:
+  if bot_choice2 == 2:
     label_result.config(text="Paper! Go Again!")
-  if bot_choice == 3:
+  if bot_choice2 == 3:
     label_result.config(text="Scissors! You lose!")
 
 def scissors():
-  if bot_choice == 1:
+  bot_choice3 = random.randint(1,3)
+  if bot_choice3 == 1:
     label_result.config(text="Rock! You lose!")
-  if bot_choice == 2:
+  if bot_choice3 == 2:
     label_result.config(text="Paper! You win!")
-  if bot_choice == 3:
+  if bot_choice3 == 3:
     label_result.config(text="Scissors! Go again!")
 
 main = tk.Tk()
@@ -35,9 +38,9 @@ main.geometry("960x600")
 label_guess = tk.Label(main, text="Which one?")
 label_guess.pack()
 
-rock1 = PhotoImage("rock.png")
-paper1 = PhotoImage("paper.png")
-scissors1 = PhotoImage("scissors.png")
+rock1 = PhotoImage(file="C:\Users\lukspain\rock.png")
+paper1 = PhotoImage(file="C:\Users\lukspain\paper.png")
+scissors1 = PhotoImage(file="C:\Users\lukspain\scissors.png")
 
 button_rock = tk.Button(main, image=rock1, command=rock)
 button_rock.pack()

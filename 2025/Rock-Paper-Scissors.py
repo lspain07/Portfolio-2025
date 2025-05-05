@@ -8,7 +8,7 @@ import random
 def rock():
   bot_choice1 = random.randint(1,3)
   if bot_choice1 == 1:
-    label_result.config(text="Rock! Go Again!")
+    label_result.config(text="Rock! Go again!")
   if bot_choice1 == 2:
     label_result.config(text="Paper! You lose!")
   if bot_choice1 == 3:
@@ -19,7 +19,7 @@ def paper():
   if bot_choice2 == 1:
     label_result.config(text="Rock! You win!")
   if bot_choice2 == 2:
-    label_result.config(text="Paper! Go Again!")
+    label_result.config(text="Paper! Go again!")
   if bot_choice2 == 3:
     label_result.config(text="Scissors! You lose!")
 

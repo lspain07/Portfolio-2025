@@ -9,53 +9,56 @@ win = 0
 loss = 0
 draw = 0
 
+def win_function():
+   global win, loss, draw
+   win += 1
+   win_counter.config(text=f"Wins: {win}")
+
+def loss_function():
+   global win, loss, draw
+   loss += 1
+   loss_counter.config(text=f"Losses: {loss}")
+
+def draw_function():
+   global win, loss, draw
+   draw += 1
+   draw_counter.config(text=f"Draws: {draw}")
+
 def rock():
   bot_choice1 = random.randint(1,3)
-  global win, loss, draw
   if bot_choice1 == 1:
     label_result.config(text="Rock! Go again!")
-    draw += 1
-    draw_counter.config(text=f"Draws: {draw}")
+    draw_function()
   if bot_choice1 == 2:
     label_result.config(text="Paper! You lose!")
-    loss += 1
-    loss_counter.config(text=f"Losses: {loss}")
+    loss_function()
   if bot_choice1 == 3:
     label_result.config(text="Scissors! You win!")
-    win += 1
-    win_counter.config(text=f"Wins: {win}")
+    win_function()
 
 def paper():
   bot_choice2 = random.randint(1,3)
-  global win, loss, draw
   if bot_choice2 == 1:
     label_result.config(text="Rock! You win!")
-    win += 1
-    win_counter.config(text=f"Wins: {win}")
+    win_function()
   if bot_choice2 == 2:
     label_result.config(text="Paper! Go again!")
-    draw += 1
-    draw_counter.config(text=f"Draws: {draw}")
+    draw_function()
   if bot_choice2 == 3:
     label_result.config(text="Scissors! You lose!")
-    loss += 1
-    loss_counter.config(text=f"Losses: {loss}")
-
+    loss_function()
+    
 def scissors():
   bot_choice3 = random.randint(1,3)
-  global win, loss, draw
   if bot_choice3 == 1:
     label_result.config(text="Rock! You lose!")
-    loss += 1
-    loss_counter.config(text=f"Losses: {loss}")
+    loss_function()
   if bot_choice3 == 2:
     label_result.config(text="Paper! You win!")
-    win += 1
-    win_counter.config(text=f"Wins: {win}")
+    win_function()
   if bot_choice3 == 3:
     label_result.config(text="Scissors! Go again!")
-    draw += 1
-    draw_counter.config(text=f"Draws: {draw}")
+    draw_function()
 
 main = tk.Tk()
 main.title("Rock! Paper! Scissors!")

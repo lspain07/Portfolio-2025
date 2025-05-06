@@ -58,3 +58,5 @@ button_scissors = tk.Button(main, image=scissors1, command=scissors)
 button_scissors.pack(side=tk.LEFT)
 
 main.mainloop()
+#I need to figure out how to add a counter that tells
+#the user how many wins, losses, and draws they have

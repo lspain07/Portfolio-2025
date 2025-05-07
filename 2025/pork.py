@@ -9,4 +9,3 @@
 #2 - write a basic throughline for the player to follow
 #3 - describe end goal and how to achieve it
 #4 - make game mechanics to keep the player entertained cause monkey brain (score system?)
-#5 - 

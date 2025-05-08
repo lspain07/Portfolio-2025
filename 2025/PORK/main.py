@@ -1,8 +1,7 @@
 import random
 
-def help():
+#def help():
   
-
 print("""
 PORK: A Text-Based Adventure Game By Axion\n
 Type "help" for a tutorial and a list of commands\n
@@ -13,13 +12,15 @@ You are standing to the south of the forest in a wide green clearing\n
 There is a path ripped through the brush
 """)
 
-front_forest = str(input(""))
+def front_forest():
+  move1 = str(input(""))
+  if move1.capitalize() == "N":
+    print("""
+    You take your first step into the forest path\n
+    Darkness encroaches upon you, and you hear the rustling of beasts in the bushes around you\n
+    You can not see anything in the dark, but the rustling is getting closer
+    """)
+  else:
+    print("There is nothing for you that way")
 
-if front_forest.capitalize() == "N":
-  print("""
-  You take your first step into the forest path\n
-  Darkness encroaches upon you, and you hear the rustling of beasts in the bushes around you\n
-  You can not see anything in the dark, but the rustling is getting closer
-  """)
-else:
-  print("There is nothing for you that way")
+front_forest()

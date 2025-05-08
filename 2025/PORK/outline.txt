@@ -1,11 +1,17 @@
-#this is just me trying to recreate Zork I in python
+#this is just me trying to recreate a Zork I type text-based adventure game in python
 
 #Possible mechanics:
 #inventory button that displays what you have picked up
 #places visited viewer
 #toggleable assistance/tutorial
 
-#1 - establish basic game window/GUI
-#2 - write a basic throughline for the player to follow
+#1 - write a basic throughline for the player to follow
+#2 - establish basic game window/GUI
 #3 - describe end goal and how to achieve it
 #4 - make game mechanics to keep the player entertained cause monkey brain (score system?)
+
+Story outline: there is an evil anthropomorphic hog named Snort that has kidnapped 
+a young boy in order to steal his magical power and take over the world,
+and the player is a mercenary sent to slay Snort and return the magical child to his family.
+
+Throughline: House of boy - trail - cave - underground labyrinth - cave2 - Snort's Throne - house of boy

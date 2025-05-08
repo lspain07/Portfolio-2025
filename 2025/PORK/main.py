@@ -1,9 +1,13 @@
 import random
 
-#def help():
+def help():
+  print("")
+
+def inventory():
+  print("")
   
 print("""
-PORK: A Text-Based Adventure Game By Axion\n
+PORK: A Text-Based Adventure Game By Lukas Spain\n
 Type "help" for a tutorial and a list of commands\n
 A young boy was kidnapped by an evil wizard named Snort\n
 You are a mercenary hired by his parents to recover him\n
@@ -20,6 +24,8 @@ def front_forest():
     Darkness encroaches upon you, and you hear the rustling of beasts in the bushes around you\n
     You can not see anything in the dark, but the rustling is getting closer
     """)
+  elif move1 == "inventory":
+    inventory()
   else:
     print("There is nothing for you that way")
 

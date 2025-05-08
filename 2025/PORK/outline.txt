@@ -1,5 +1,7 @@
 #this is just me trying to recreate a Zork I type text-based adventure game in python
 
+To run it as an application I'll have to implement a module to compile it and turn it into an executable program
+
 #Possible mechanics:
 #inventory button that displays what you have picked up
 #places visited viewer
